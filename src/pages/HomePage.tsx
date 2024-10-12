@@ -1,3 +1,5 @@
+import UserPageDashboard from "./UserPageDashboard";
+
 export default function HomePage() {
-     return <h1>Este es el Home</h1>;
+     return <UserPageDashboard></UserPageDashboard>;
 }
