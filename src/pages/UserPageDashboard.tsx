@@ -7,9 +7,6 @@ import { formatDateForTable } from "../utils/dateUtils";
 export default function UserPageDashboard() {
      const { filterData, filteredData, activeButton } = FilterDataHook();
 
-     //active table filter
-     const activeTableFilterStyle = ``;
-
      return (
           <>
                <nav className="flex justify-between px-[107px] mt-[47px]">
@@ -35,18 +32,12 @@ export default function UserPageDashboard() {
                </header>
 
                {/* table */}
-
-               {/* 
-                    [x] hook para los datos, por defecto, todos los datos son visibles, si preciono un boton, se hace el filtrado
-                    [x] filtar por nuevos
-                    [x] filtrar por en progreso
-                    [x] filtrar resueltos
-                    [] animacion de indicativo de donde estamos
-          */}
                <div className="mt-[65px] px-[27px]">
                     <div className="flex gap-6">
                          <button
-                              className={`text-sm ${activeButton === 1 ? "font-semibold text-black" : "font-normal "}`}
+                              className={`text-sm text-[#5F5F5F] ${
+                                   activeButton === 1 ? "font-semibold text-black" : "font-normal "
+                              }`}
                               onClick={() => filterData("Todos", 1)}
                          >
                               Todos
